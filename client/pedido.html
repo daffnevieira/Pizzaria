@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylss/style.css">
+    <link rel="stylesheet" href="./stylss/novo.css">
+    <link rel="shortcut icon" href="./imgs/favicon-16x16.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Novo Pedido</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body class="body">
+
+    <header>
+        <div class="inicial-set">
+            <div class="logo-content" style="display: inline-flex;">
+                <img src="./imgs/zyro-image.png" alt="" width="50px">
+                <h1 id="logo" style="align-self: center; margin-left: 15px;"><a class="a" href="./index.html">L'arte della pizza</a></h1>
+                <div  class="hamburger">
+                  <img id="imgg" src="./imgs/hamburger-button-depositphotos-bgremover.png" width="26%" height="30%" alt="">
+                </div>
+            </div>
+  
+            <ul class="respo">
+              <li><a href="./menu.html">Menu</a></li>
+              <li><a href="./pedido.html">Novo Pedido</a></li>
+              <li><a href="./andamento.html">Andamento</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="hamburge" class="responsive-nav a-mobile">
+      <ul>
+          <li><a href="./menu.html">Menu</a></li>
+          <li><a href="./pedido.html">Pedir</a></li>
+          <li><a href="./andamento.html">Andamento</a></li>
+      </ul>
+                      
+    </div>  
+
+    <main> 
+      <form action="/pedidos" method="POST">
+        <div class="pedido-form">
+          <h3 class="titulo-da-section">Faça seu pedido</h3>
+      
+          <div>
+            <label for="nome">Seu nome:</label>
+            <input type="text" id="nome" name="nome" required>
+          </div>
+          
+          <div>
+            <label for="tamanho">Tamanho da pizza:</label>
+            <select id="tamanho" name="tamanho" class="sizeInput" aria-label=".form-select-sm example">
+              <option value="">Selecione o tamanho</option>
+              <option value="media">Média</option>
+              <option value="pequena">Pequena</option>
+              <option value="grande">Grande</option>
+            </select>
+          </div>
+          
+          <div>
+            <label for="salgada">Sabor Salgado:</label>
+            <select id="salgada" name="salgada" class="sizeInput" aria-label=".form-select-sm example">
+              <option value="">Selecione o sabor</option>
+              <option value="mussarela">Mussarela</option>
+              <option value="calabresa">Calabresa</option>
+              <option value="frango">Frango c/ Catupiry</option>
+              <option value="atumc">Atum c/ Cebola</option>
+              <option value="quatroqj">Quatro Queijos</option>
+              <option value="portuguesa">Portuguesa</option>
+              <option value="toscana">Toscana</option>
+              <option value="ultram">Ultra Mussarela</option>
+              <option value="palmito">Palmito</option>
+              <option value="bacon">Bacon</option>
+              <option value="charque">Charque</option>
+              <option value="atumpiry">Atum com Catupiry</option>
+            </select>
+          </div>
+          
+          <div>
+            <label for="sobremesas">Sobremesas:</label>
+            <select id="sobremesas" name="sobremesas" class="sizeInput" aria-label=".form-select-sm example">
+              <option value="">Selecione a sobremesa</option>
+              <option value="romeuej">Romeu e Julieta</option>
+              <option value="chomorango">Chocolate e Morango</option>
+              <option value="crepe">Crepe de Nutella com Banana</option>
+              <option value="pudim">Pudim</option>
+              <option value="mms">MM's</option>
+              <option value="ovomaltine">Ovomaltine</option>
+              <option value="petitg">Petit Gateau</option>
+            </select>
+          </div>
+          
+          <div class="form-check">
+            <h3 class="titulo-da-section">Borda</h3>
+            <input id="catupiry" class="checks-space" type="radio" name="borda">
+            <label class="form-check-label" for="catupiry">Catupiry - R$4</label>
+          </div>
+          
+          <div class="form-check">
+            <input id="cheedar" class="checks-space" type="radio" name="borda">
+            <label class="form-check-label" for="cheedar">Cheedar - R$6</label>
+          </div>
+          
+          <div class="form-check">
+            <input id="nutella" class="checks-space" type="radio" name="borda">
+            <label class="form-check-label" for="nutella">Nutella - R$7</label>
+          </div>
+          
+          <div class="form-check">
+            <h3 class="titulo-da-section">Bebidas</h3>
+            <input id="laranja" class="checks-space" type="checkbox" name="bebida[]">
+            <label class="form-check-label" for="laranja">Suco de Laranja</label>
+            
+            <input id="maracuja" class="" type="checkbox" name="bebida[]">
+            <label class="form-check-label" for="maracuja">Suco de Maracujá</label>
+            
+            <input id="manga" class="checks-space" type="checkbox" name="bebida[]">
+            <label class="form-check-label" for="manga">Suco de Manga</label>
+            
+            <input id="coca" class="checks-space" type="checkbox" name="bebida[]">
+            <label class="form-check-label" for="coca">Coca-Cola 2L</label>
+            
+            <input id="fanta" class="checks-space" type="checkbox" name="bebida[]">
+            <label class="form-check-label" for="fanta">Fanta 2L</label>
+            
+            <input id="guarana" class="checks-space" type="checkbox" name="bebida[]">
+            <label class="form-check-label" for="guarana">Guaraná Antártica 2L</label>
+          </div>
+          
+          <div class="mt-4">
+            <label for="textobs">Observações:</label>
+            <textarea id="textobs" name="observacoes" cols="30" rows="3"></textarea>
+          </div>
+          
+          <div class="form-check">
+            <h3 class="titulo-da-section">Pagamento</h3>
+            <input id="dinheiro" class="checks-space" type="radio" name="pagamento" value="dinheiro">
+            <label class="form-check-label" for="dinheiro">Dinheiro</label>
+            
+            <input id="credito" class="checks-space" type="radio" name="pagamento" value="credito">
+            <label class="form-check-label" for="credito">Crédito</label>
+            
+            <input id="debito" class="checks-space" type="radio" name="pagamento" value="debito">
+            <label class="form-check-label" for="debito">Débito</label>
+          </div>
+        </div>
+        
+        <div>
+          <h2 id="pedidoValor"></h2>
+        </div>
+        
+        <div>
+          <input id="submit" class="btn btn-success m-4 botao" type="submit" name="submit" value="Enviar Pedido">
+        </div>
+      </form>
+    </main>
+    
+    <footer>
+        <section>
+            <div class="section-son">
+                <h4>Sobre nós</h4>
+                <p>Há 20 anos atrás quando chegamos no Brasil, tinhamos o sonho de 
+                  levar nosso sabor, e em menos de 7 anos conseguimos nos tornar a melhor 
+                  pizzaria de São Paulo. Nos estabelecendo em mais 3 estados do país e recebendo
+                  vários selos de qualidade. Levamos pizzas saborosas que irão te fazer viciar < 3</p>
+
+            </div>
+            <div class="section-son">
+                <h4>Contato</h4>
+                <ul>
+                    <li>Tel: 11 98XXXXXXXX</li>
+                    <li>Email: pizzabar@gmail.com</li>
+                    <li>Rua Tenório, 400 - SP</li>
+                    
+                </ul>
+            </div>
+            <div class="section-son">
+                <h4>Redes</h4>
+                <ul>
+                  <li><a href="">Instagram</a></li>
+                  <li><a href="">Facebook</a></li>
+                  <li><a href="">Twitter</a></li>
+                  <li><a href="">WhatsApp</a></li>
+                </ul>
+            </div>
+        </section>
+        <div id="copy">
+            <h5 style="color: rgb(0, 0, 0);">@Copyright 2022</h5>
+        </div>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> -->
+
+<script src="../codigos/script.js"></script>
+
+</body>
+</html>

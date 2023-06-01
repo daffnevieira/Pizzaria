@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/stylss/style.css">
     <link rel="stylesheet" href="/stylss/novo.css">
     <link rel="shortcut icon" href="/imgs/favicon-16x16.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Andamento do pedido</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,9 +23,11 @@
             <div class="logo-content" style="display: inline-flex; width: auto; height: auto;">
                 <img src="/imgs/zyro-image.png" alt="" width="50px" >
                 <h1 id="logo" style="align-self: center; margin-left: 15px;"><a class="a" href="/indexsd/index.html">L'arte della pizza</a></h1>
+                <div  class="hamburger">
+                    <img id="imgg" src="/imgs/hamburger-button-depositphotos-bgremover.png" width="26%" height="30%" alt="">
+                </div>
             </div>
-            <div class="respo"></div>
-            <ul>
+            <ul class="respo">
                 <li><a href="/indexsd/menu.html">Menu</a></li>
                 <li><a href="/indexsd/pedido.html">Novo Pedido</a></li>
                 <li><a href="/indexsd/cont.html">Andamento</a></li>
@@ -34,57 +37,55 @@
     </header>
     <main>
         <div class="container-anda">
+            
             <h2 class="dshjhejyu">Andamento</h2>
-            <div>
-                <label>
-                    <div class="flex-pedido">
-                        
-                        <div class="input-group">
-                            <span class="input-group-text responsive-selec" >Pedido</span>
-                            <input type="text" aria-label="First name" class="form-control">
-                            <input type="text" aria-label="Last name" class="form-control">
-                        
-                            <select class="input-group-text responsive-selec" aria-label="">
-                                <option selected>Status</option>
-                                <option value="1">Em andamento</option>
-                                <option value="2">Finalizado</option>
-                            </select>
-                        
-                        
-                            <button class="button btn btn-warning">Cancelar</button>
-                        </div>
-                    </label>
-                </div>
-                <!-- <div class="controle">
+            <!-- <div>
+                
+                
+            </div> -->
+                <div class="controle">
                     <label>
-                        <div class="flex-pedido">
+                        
+                            <table class="table table-dark table-striped">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">Método de pagamento</th>
+                                    <th scope="col">Observações</th>
+                                    <th scope="col">Status</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="">
+                                        <select class="form-select" aria-label="select example">
+                                            <option selected>Andamento</option>
+                                            <option value="1">Entrega</option>
+                                            <option value="2">Pedido Recebido</option>
+                                            <option value="3">Analizando Pedido</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
                             
-                            <div class="input-group">
-                                <span class="input-group-text" >Pedido</span>
-                                <input type="text" aria-label="First name" class="form-control">
-                                <input type="text" aria-label="Last name" class="form-control">
-                            
-                                <select class="" aria-label="">
-                                    <option selected>Status</option>
-                                    <option value="1">Em andamento</option>
-                                    <option value="2">Finalizado</option>
-                                </select>
-                            
-                            
-                                <button class="button btn btn-warning">Cancelar</button>
-                            </div>
                         </label>
-                    </div> -->
-                <!-- <fieldset>
-                    <div class="mb-3">
-                        <input type="text" class="input-space form-control" id="formGroupExampleInput" placeholder="Nome">
-                        <input type="tel" class="form-control input-space" id="formGroupExampleInput" placeholder="Telefone">
-                      </div>
-                </fieldset> -->
+                    </div>
                 
             </div>
            
         </div>
+        <div id="hamburge" class="responsive-nav a-mobile">
+            <ul>
+                <li><a href="/indexsd/menu.html">Menu</a></li>
+                <li><a href="/indexsd/pedido.html">Pedir</a></li>
+                <li><a href="/indexsd/cont.html">Andamento</a></li>
+            </ul>
+                            
+        </div> 
     </main>
     <br><br><br><br><br><br><br>
     
@@ -123,5 +124,6 @@
     </footer>
     <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="/códigos/script.js"></script>
 </body>
 </html>

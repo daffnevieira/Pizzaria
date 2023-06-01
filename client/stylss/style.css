@@ -74,9 +74,9 @@ main{
     text-align: center; margin: 10vh;
 }
 /* H1 config */
-.dshjhejyu{          
+.titulo-da-section{          
     text-decoration: underline;
-    margin: 20px;
+    margin: 10px;
 }
 /* Footer */
 footer{
@@ -97,7 +97,7 @@ footer{
     padding: 10px;
 }
 #copy > h5{
-    font-size: 15px;
+    font-size: 1.0rem;
 }
 section{
     position: absolute;
@@ -117,7 +117,7 @@ section{
     font-size: 20px;
 }
 .section-son > h4 {
-    font-size: 20px;
+    font-size: 1rem;
 }
 .section-son > ul li a{
     color: var(--blackk);
@@ -129,6 +129,9 @@ section{
     text-align: left;
 }
 @media (max-width: 800px) {
+    #img-principal{
+        width: 200px;
+    }
     .a-mobile{
         text-decoration: none;
     }
@@ -148,12 +151,13 @@ section{
     }
     .logo-content h1{
         width: 100%;
-        font-size: 1.5em;
+        font-size: 2.0rem;
         display: inline;
     }
     .hamburger{
         display: flex;
         justify-content: end;
+
     }
     .respo > li{
        display: none;
@@ -161,14 +165,13 @@ section{
     .responsive-nav{
         width: auto;
         height: auto;
-        border-bottom: 2%;
-        padding: 10%;
+        padding: 10px;
         background-color: rgb(75, 2, 2);
-        font-size: 20px; 
+        font-size: 25px; 
     }
     .responsive-nav > ul li{
         list-style: none;
-        margin-top: 40px;
+        margin-top: 20px;
         text-align: center;
     }
     .responsive-nav > ul li a{
@@ -182,14 +185,14 @@ section{
 }
 @media (max-width: 780px) {
     footer{
-        height: 60vh;
+        height: 30vh;
     }
     
     #copy > h5{
-        font-size: 11px;
+        font-size: 12px;
     }
     .section-son{
-        font-size: 12px;
+        font-size: 10px;
     }
     .section-son > ul li{
         font-size: 12px;

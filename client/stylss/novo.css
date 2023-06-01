@@ -35,10 +35,11 @@ form{
     margin: 20px;
     border-radius: 10px;
     background-color: var(--color-prin);
+    font-size: 20px;
 }
 .sizeInput{
     width: 60%;
-    height: 5vh;
+    height: auto;
     margin: 20px;
     background-color: var(--white-);
     border-radius: 2px;
@@ -51,7 +52,7 @@ form{
 }
 .pedido-form{
     position: relative;
-    margin: 20px;
+    margin: 10px;
 }
 .pedido-form h2{
     margin: 20px;
@@ -113,6 +114,11 @@ table{
     height: 20vh;
 }
 @media (max-width: 550px) {
+    form{
+        width: auto;
+        font-size: 1rem;
+        text-align: center;
+    }
     .color-menu{
         position: relative;
         height: 420vh;
@@ -132,5 +138,10 @@ table{
         top: 240vh;
         left: 10%;
     }
-
+    .pedido-form{
+        margin: 0;
+    }
+    .form-check{
+        margin: 0;
+    }
 }

@@ -1,13 +1,9 @@
-function clickH(nav){
-    const elemento = document.getElementById("hamburge");
-
-    
-
-    if (elemento.classList){
-
-        elemento.classList.toggle("responsive-nav")
-    
-    }
-}
+const img = $("#imgg")
+const hamb = $(".responsive-nav")
 
 
+img.click(() => {
+
+    hamb.toggle()
+
+})
