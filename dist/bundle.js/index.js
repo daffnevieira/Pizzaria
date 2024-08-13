@@ -7,7 +7,7 @@ var PORT = 3000;
 
 app.use("/", express["static"]("client"), router);
 
-var PORT = 3000;
+var PORT = 5500;
 
 app.listen(PORT, function () {
 	console.log("Server Running on port:".concat(PORT));

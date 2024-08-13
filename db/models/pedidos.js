@@ -1,14 +1,16 @@
 import { Sequelize } from "sequelize";
 import sequelize from "./db.js"
+import dotenv from 'dotenv';
+dotenv.config();
 
-const user = sequelize.define("pedidos", {
+const user = sequelize.define(process.env.TABLE, {
 	id : {
 		type: Sequelize.INTEGER,
 		autoIncrement: true,
 		allowNull: true,
 		primaryKey: true
 	},
-	name: {
+	nome: {
 		type: Sequelize.STRING,
 		allowNull: false,
 	},
@@ -28,7 +30,7 @@ const user = sequelize.define("pedidos", {
 		type: Sequelize.STRING,
 		allowNull: true
 	},
-	bebidas: {
+	bebida: {
 		type: Sequelize.STRING,
 		allowNull: true
 	},
@@ -45,6 +47,13 @@ const user = sequelize.define("pedidos", {
 			}
 		}
 	}
+});
+sequelize.sync({ force: false }) 
+  .then(() => {
+    console.log('Modelos sincronizados com o banco de dados.');
+  })
+  .catch(err => {
+    console.error('Erro ao sincronizar modelos:', err);
 });
 
 

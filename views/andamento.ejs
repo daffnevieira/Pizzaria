@@ -4,64 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylss/style.css">
     <link rel="stylesheet" href="/stylss/novo.css">
-    <link rel="shortcut icon" href="/imgs/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="/stylss/style.css">
+    <link rel="shortcut icon" href="./imgs/favicon-16x16.png" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
-    <title>L'arte della pizza</title>
+    <title>Andamento do pedido</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
+    <style>
+        li{
+            list-style: none;
+        }
+        li strong{
+            color: red;
+        }
+    </style>
 </head>
 <body class="body">
+
+
     <header>
         <div class="inicial-set">
-            <div class="logo-content" style="display: inline-flex;">
-                <img src="/imgs/zyro-image.png" alt="" width="50px">
-                <h1 id="logo" style="align-self: center; margin-left: 15px;"><a class="a" href="/indexsd/index.html">L'arte della pizza</a></h1>
+            <div class="logo-content" style="display: inline-flex; width: auto; height: auto;">
+                <img src="../client/imgs/zyro-image.png" alt="" width="50px" >
+                <h1 id="logo" style="align-self: center; margin-left: 15px;"><a class="a" href="./index.html">L'arte della pizza</a></h1>
                 <div  class="hamburger">
                     <img id="imgg" src="/imgs/hamburger-button-depositphotos-bgremover.png" width="26%" height="30%" alt="">
                 </div>
             </div>
             <ul class="respo">
-                <li><a href="/indexsd/menu.html">Menu</a></li>
-                <li><a href="/indexsd/pedido.html">Novo Pedido</a></li>
-                <li><a href="/indexsd/cont.html">Andamento</a></li>
+                <li><a href="/menu.html">Menu</a></li>
+                <li><a href="/pedido.html">Novo Pedido</a></li>
             </ul>
+            
         </div>
     </header>
+    <div id="hamburge" class="responsive-nav a-mobile">
+        <ul>
+            <li><a href="/menu.html">Menu</a></li>
+            <li><a href="/pedido.html">Pedir</a></li>
+        </ul>
+                        
+    </div> 
     <main>
-        
-        <div class="main-sec">
-            <div class="text-con">
-                <h1>A melhor pizza da região</h1>
+        <div class="container-anda">
+            <h1>Andamento</h1>
+            <div id="controle" class="controle">
+                <ul>
+                <li><strong>ID do Pedido:</strong> <%= dados.id %></li>
+                <li><strong>Nome do Cliente:</strong> <%= dados.nome %></li>
+                <!-- <li><strong>Tamanho:</strong> <%= dados.tamanho %></li>
+                <li><strong>Sabor Salgado:</strong> <%= dados.saborSalgado %></li>
+                <li><strong>Sobremesa:</strong> <%= dados.sobremesa %></li>
+                <li><strong>Borda:</strong> <%= dados.borda %></li>
+                <li><strong>Bebida:</strong> <%= dados.bebida %></li> -->
+                <li><strong>Observações:</strong> <%= dados.obs %></li>
+                <li><strong>Forma de Pagamento:</strong> <%= dados.pgto %></li>
+                </ul>
             </div>
         </div>
-        <div id="hamburge" class="responsive-nav a-mobile">
-            <ul>
-                <li><a href="/indexsd/menu.html">Menu</a></li>
-                <li><a href="/indexsd/pedido.html">Pedir</a></li>
-                <li><a href="/indexsd/cont.html">Andamento</a></li>
-            </ul>
-                            
-        </div>
     </main>
-    <div class="d-flex justify-content-center">
-        <iframe class="mt-2" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14228.78685434075!2d-46.575570148423175!3d-23.743905304653474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1653802919863!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+    <br><br><br><br><br><br><br>
+    
     <footer>
         <section>
             <div class="section-son">
                 <h4>Sobre nós</h4>
                 <p>Há 20 anos atrás quando chegamos no Brasil, tinhamos o sonho de 
-                levar nosso sabor, e em menos de 7 anos conseguimos nos tornar a melhor 
-                pizzaria de São Paulo. Nos estabelecendo em mais 3 estados do país e recebendo
-                vários selos de qualidade. Levamos pizzas saborosas que irão te fazer viciar < 3
-                </p>
+                    levar nosso sabor, e em menos de 7 anos conseguimos nos tornar a melhor 
+                    pizzaria de São Paulo. Nos estabelecendo em mais 3 estados do país e recebendo
+                    vários selos de qualidade. Levamos pizzas saborosas que irão te fazer viciar < 3</p>
 
             </div>
             <div class="section-son">
@@ -89,8 +104,6 @@
     </footer>
     <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
-<script src="/códigos/script.js"></script>
-<script src="/códigos/valores.js"></script>
+<script src="/codigos/script.js"></script>
 </body>
 </html>
