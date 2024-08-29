@@ -8,14 +8,6 @@ router.use(express.urlencoded({ extended: true }));
 router.use(express.json());
 
 
-router.get('/menu', (req, res) => {
-  res.sendFile('menu.html', { root: 'client' });
-});
-
-router.get('/pedido', (req, res) => {
-  res.sendFile('pedido.html', { root: 'client' });
-}); 
-
 router.post('/pedidos', async (req, res) => {
   const { nome, tamanho, saborSalgado, sobremesa, borda, bebida, obs, pgto } = req.body;
   const bebidaString = Array.isArray(bebida) ? bebida.join(', ') : bebida;
