@@ -198,3 +198,8 @@ section{
         font-size: 12px;
     }
 }
+/* andamento */
+
+table th td {
+    margin: 20px;
+}

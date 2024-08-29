@@ -1,0 +1,50 @@
+Sistema de Gerenciamento de Pizzaria 🍕
+Descrição
+Este projeto é um sistema de gerenciamento de pedidos de uma pizzaria. Ele permite que os clientes façam pedidos personalizados através de um formulário online e acompanhem o status do pedido. O sistema foi desenvolvido com Node.js, MySQL, EJS, e segue um estilo corporativo. O menu é estático e oferece opções variadas de pizzas, bordas, bebidas e sobremesas.
+
+Funcionalidades
+Menu Estático: Visualização de opções de pizzas, bordas, bebidas e sobremesas disponíveis.
+Formulário de Pedidos: Sistema para clientes personalizarem e realizarem pedidos com várias opções (nome, tamanho, sabor, borda, bebida, etc.).
+Gestão de Pedidos: Administração dos pedidos realizados, com acompanhamento do status.
+Integração com Banco de Dados: Armazenamento e gestão dos pedidos em um banco de dados MySQL.
+Frontend Corporativo: Interface de usuário desenhada com estilo corporativo utilizando EJS.
+Tecnologias Utilizadas
+Node.js: Back-end do sistema, responsável pela lógica de negócios e integração com o banco de dados.
+EJS: Template engine usada para criar as páginas dinâmicas do front-end.
+MySQL: Banco de dados relacional utilizado para armazenar as informações dos pedidos.
+CSS: Estilização das páginas para proporcionar uma interface amigável e profissional.
+JavaScript (ES6): Lógica no front-end para interações dinâmicas.
+Como Executar o Projeto
+Clone o repositório:
+
+bash
+Copiar código
+git clone https://github.com/SeuUsuario/nome-do-repositorio.git
+cd nome-do-repositorio
+Instale as dependências:
+
+bash
+Copiar código
+npm install
+Configure o banco de dados:
+
+Crie um banco de dados MySQL.
+Execute as migrations ou importe o arquivo .sql fornecido para configurar as tabelas.
+Configure as variáveis de ambiente:
+
+Crie um arquivo .env na raiz do projeto com as seguintes informações:
+makefile
+Copiar código
+DB_HOST=localhost
+DB_USER=seuUsuario
+DB_PASSWORD=suaSenha
+DB_NAME=nomeDoBanco
+PORT=3000
+Inicie o servidor:
+
+bash
+Copiar código
+npm start
+Acesse o sistema:
+
+Abra o navegador e vá para http://localhost:3000.

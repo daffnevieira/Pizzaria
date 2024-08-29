@@ -1,3 +1,4 @@
+
 const img = $("#imgg")
 const hamb = $(".responsive-nav")
 
@@ -10,5 +11,7 @@ img.click(() => {
 const submit = $("#submit")
 let nome = $("#nome")
 submit.click(() => {
-    alert("Obrigada pela preferência, acompanhe seu pedido pela página de Andamento")
+
+    alert(`Obrigado pela preferência! Você será redirecionado para página de andamento. Até mais!`)
 })
+
